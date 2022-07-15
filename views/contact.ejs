@@ -1,0 +1,27 @@
+<div class="container">
+  <h1>Contact List</h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% if (cont < 1) {%>
+      <tr>
+        <td colspan="4">data kosong</td>
+      </tr>
+      <% } else {%> <% for (let index=0; index < cont.length; index++) { %>
+      <tr>
+        <th scope="row"><%= index+1 %></th>
+        <th><%=cont[index].name %></th>
+        <th><%=cont[index].email %></th>
+        <th>detail | edit | delete</th>
+      </tr>
+      <% } %> <%}%>
+    </tbody>
+  </table>
+</div>
